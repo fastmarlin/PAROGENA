@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.hummeling.if97","l":"IF97"},{"p":"com.hummeling.if97","l":"OutOfRangeException"},{"p":"com.hummeling.if97","l":"IF97.Quantity"},{"p":"com.hummeling.if97","l":"Region1"},{"p":"com.hummeling.if97","l":"IF97.UnitSystem"}]

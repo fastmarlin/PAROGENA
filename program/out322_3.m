@@ -1,9 +1,9 @@
 fprintf('\n Невязка по D:\n')
 for i = 1:length(w1)
     if deltaD(i) > 12
-        fprintf('  * ')
+        fprintf(' * ')
     else
-        fprintf('    ')
+        fprintf('   ')
     end
     fprintf('w1 = %.1f м/с: ΔD = %.1f%% \n', w1(i), deltaD(i))
 end

@@ -40,6 +40,7 @@ dataVars = {
 };
 
 %% 2. Проверка существования необходимых переменных
+load out325_names.mat
 if ~exist('res', 'var') || ~isstruct(res) || ~isfield(res, 'names') || ~isfield(res, 'units')
     error('Переменная "res" (структура с полями names и units) не найдена в рабочей области.');
 end
@@ -181,3 +182,31 @@ end
 
 % Дополнительно: можно открыть файл для просмотра (опционально)
 % winopen(fileName);
+
+% %% 6. Применение числового формата к диапазонам C9:H11 и C22:H22
+% try
+%     excelApp = actxserver('Excel.Application');
+%     excelApp.Visible = false;
+%     workbook = excelApp.Workbooks.Open(fullPath);
+%     sheet = workbook.Sheets.Item(1);
+% 
+%     % Установка числового формата (два знака после запятой)
+%     range1 = sheet.Range('C9:H11');
+%     range2 = sheet.Range('C22:H22');
+%     range1.NumberFormat = '0.00';   % Можно заменить на 'General' или '0'
+%     range2.NumberFormat = '0.00';
+% 
+%     workbook.Save();
+%     workbook.Close(false);
+%     excelApp.Quit();
+%     delete(excelApp);
+%     fprintf('Числовой формат применён к диапазонам C9:H11 и C22:H22.\n');
+% catch ME
+%     % Закрываем Excel в случае ошибки
+%     try %#ok<TRYNC>
+%         workbook.Close(false);
+%         excelApp.Quit();
+%         delete(excelApp);
+%     end
+%     error('Ошибка при форматировании Excel: %s', ME.message);
+% end

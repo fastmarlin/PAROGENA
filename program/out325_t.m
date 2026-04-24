@@ -19,12 +19,12 @@ dataVars = {
     L_max;
     L_min;
     L;
-    h.h1;
-    h.h1;
-    h.h2;
-    h.h3;
-    h.h4;
-    h.h5;
+    hh1;
+    hh1;
+    hh2;
+    hh3;
+    hh4;
+    hh5;
     D1;
     D2;
     D;
